@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Tweetbook.API.Domain;
 
@@ -6,12 +7,14 @@ namespace Tweetbook.API.Services
 {
     public interface IPostService
     {
-        Post GetPostById(Guid postId);
+        Task<Post> GetPostByIdAsync(Guid postId);
 
-        List<Post> GetPosts();
+        Task<List<Post>> GetPostsAsync();
 
-        bool UpdatePost(Post postToUpdate);
+        Task<bool> CreatePostAsync(Post postToCreate);
 
-        bool DeletePost(Guid postId);
+        Task<bool> UpdatePostAsync(Post postToUpdate);
+
+        Task<bool> DeletePostAsync(Guid postId);
     }
 }

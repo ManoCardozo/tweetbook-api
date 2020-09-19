@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Tweetbook.API.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Tweetbook.API.Data
@@ -8,6 +9,9 @@ namespace Tweetbook.API.Data
         public DataContext(DbContextOptions<DataContext> options)
             : base(options)
         {
+
         }
+
+        public DbSet<Post> Posts { get; set; }
     }
 }
