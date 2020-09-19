@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tweetbook.Application\Tweetbook.Application.csproj" />
+    <ProjectReference Include="..\Tweetbook.Contracts\Tweetbook.Contracts.csproj" />
     <ProjectReference Include="..\Tweetbook.Domain\Tweetbook.Domain.csproj" />
   </ItemGroup>
 

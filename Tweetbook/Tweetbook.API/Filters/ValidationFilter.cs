@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Tweetbook.API.Contracts;
+using Tweetbook.Contracts;
 
 namespace Tweetbook.API.Filters
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tweetbook.API.Contracts
+namespace Tweetbook.Contracts
 {
     public class ErrorResponse
     {

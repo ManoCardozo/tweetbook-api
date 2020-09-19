@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using Tweetbook.API.Contracts.V1.Requests;
+using Tweetbook.Contracts.V1.Requests;
 
-namespace Tweetbook.API.Contracts.V1.Validators
+namespace Tweetbook.API.Validators.V1
 {
     public class CreatePostRequestValidator : AbstractValidator<CreatePostRequest>
     {

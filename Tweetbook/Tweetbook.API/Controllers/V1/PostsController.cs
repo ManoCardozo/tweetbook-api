@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Tweetbook.API.Contracts.V1;
-using Tweetbook.API.Contracts.V1.Requests;
-using Tweetbook.API.Contracts.V1.Responses;
+using Tweetbook.Contracts.V1;
+using Tweetbook.Contracts.V1.Responses;
+using Tweetbook.Contracts.V1.Requests;
 using Tweetbook.Application.Services;
 using Tweetbook.Domain.Entities;
 using AutoMapper;

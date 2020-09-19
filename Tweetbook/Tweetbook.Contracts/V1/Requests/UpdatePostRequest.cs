@@ -1,4 +1,4 @@
-﻿namespace Tweetbook.API.Contracts.V1.Requests
+﻿namespace Tweetbook.Contracts.V1.Requests
 {
     public class UpdatePostRequest
     {

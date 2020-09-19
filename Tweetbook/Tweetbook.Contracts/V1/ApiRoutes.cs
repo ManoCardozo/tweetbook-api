@@ -1,4 +1,4 @@
-﻿namespace Tweetbook.API.Contracts.V1
+﻿namespace Tweetbook.Contracts.V1
 {
     public static class ApiRoutes
     {
