@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tweetbook.Application", "Tw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweetbook.Contracts", "Tweetbook.Contracts\Tweetbook.Contracts.csproj", "{07F31AB4-2D39-4450-B3E3-6EB718527AAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweetbook.API.SDK", "Tweetbook.API.SDK\Tweetbook.API.SDK.csproj", "{7423493C-E967-405B-9606-660657BC521A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweetbook.API.SDK.Sample", "Tweetbook.API.SDK.Sample\Tweetbook.API.SDK.Sample.csproj", "{CF67F717-2805-4AE8-ACFC-E7E6836FF477}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{07F31AB4-2D39-4450-B3E3-6EB718527AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07F31AB4-2D39-4450-B3E3-6EB718527AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07F31AB4-2D39-4450-B3E3-6EB718527AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7423493C-E967-405B-9606-660657BC521A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7423493C-E967-405B-9606-660657BC521A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7423493C-E967-405B-9606-660657BC521A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7423493C-E967-405B-9606-660657BC521A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF67F717-2805-4AE8-ACFC-E7E6836FF477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF67F717-2805-4AE8-ACFC-E7E6836FF477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF67F717-2805-4AE8-ACFC-E7E6836FF477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF67F717-2805-4AE8-ACFC-E7E6836FF477}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
