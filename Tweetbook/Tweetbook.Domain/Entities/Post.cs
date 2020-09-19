@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Tweetbook.API.Domain
+namespace Tweetbook.Domain.Entities
 {
     public class Post
     {

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Tweetbook.API.Domain;
+using Tweetbook.Domain.Entities;
 using Tweetbook.API.Contracts.V1.Responses;
 
 namespace Tweetbook.API.Mapping

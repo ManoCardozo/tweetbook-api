@@ -17,4 +17,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tweetbook.Domain\Tweetbook.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

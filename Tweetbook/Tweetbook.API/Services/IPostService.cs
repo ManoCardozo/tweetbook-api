@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Tweetbook.API.Domain;
+using Tweetbook.Domain.Entities;
 
 namespace Tweetbook.API.Services
 {

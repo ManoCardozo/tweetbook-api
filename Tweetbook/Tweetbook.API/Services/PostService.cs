@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Tweetbook.API.Data;
-using Tweetbook.API.Domain;
+using Tweetbook.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Tweetbook.API.Services

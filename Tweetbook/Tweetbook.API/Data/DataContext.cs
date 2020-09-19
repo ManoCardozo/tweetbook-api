@@ -1,4 +1,4 @@
-﻿using Tweetbook.API.Domain;
+﻿using Tweetbook.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
