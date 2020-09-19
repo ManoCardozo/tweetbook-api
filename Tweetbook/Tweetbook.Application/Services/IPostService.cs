@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Tweetbook.Domain.Entities;
 
-namespace Tweetbook.API.Services
+namespace Tweetbook.Application.Services
 {
     public interface IPostService
     {

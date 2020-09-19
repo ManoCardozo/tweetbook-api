@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Tweetbook.API.Data;
-using Tweetbook.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Tweetbook.Domain.Entities;
+using Tweetbook.Data;
 
-namespace Tweetbook.API.Services
+namespace Tweetbook.Application.Services
 {
     public class PostService : IPostService
     {
