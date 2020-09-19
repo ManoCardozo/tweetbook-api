@@ -1,2 +1,2 @@
-# tweetboook-api
+# tweetbook-api
 A .NET Core API that handles "Tweets"
