@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweetbook.API", "Tweetbook.API\Tweetbook.API.csproj", "{8EB06965-F79C-4D0E-B9D6-04A6CE4D8F46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EB06965-F79C-4D0E-B9D6-04A6CE4D8F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB06965-F79C-4D0E-B9D6-04A6CE4D8F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB06965-F79C-4D0E-B9D6-04A6CE4D8F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB06965-F79C-4D0E-B9D6-04A6CE4D8F46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2D43B55-8B0C-4005-8112-C569BEAA6E6B}
+	EndGlobalSection
+EndGlobal
