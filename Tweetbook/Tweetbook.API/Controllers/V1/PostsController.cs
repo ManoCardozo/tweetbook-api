@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tweetbook.API.Domain;
@@ -27,13 +28,27 @@ namespace Tweetbook.API.Controllers.V1
                 return NotFound();
             }
 
-            return Ok(post);
+            var response = new PostResponse
+            {
+                Id = post.Id,
+                Name = post.Name
+            };
+
+            return Ok(response);
         }
 
         [HttpGet(ApiRoutes.Posts.GetAll)]
         public async Task<IActionResult> GetAllAsync()
         {
-            return Ok(await _postService.GetPostsAsync());
+            var posts = await _postService.GetPostsAsync();
+
+            var response = posts.Select(post => new PostResponse
+            {
+                Id = post.Id,
+                Name = post.Name
+            });
+
+            return Ok(response);
         }
 
         [HttpPut(ApiRoutes.Posts.Update)]
@@ -52,7 +67,13 @@ namespace Tweetbook.API.Controllers.V1
                 return NotFound();
             }
 
-            return Ok(post);
+            var response = new PostResponse
+            {
+                Id = post.Id,
+                Name = post.Name
+            };
+
+            return Ok(response);
         }
 
         [HttpPost(ApiRoutes.Posts.Create)]
@@ -60,7 +81,7 @@ namespace Tweetbook.API.Controllers.V1
         {
             var post = new Post 
             { 
-                Name = postRequest.Name 
+                Name = postRequest.Name
             };
 
             await _postService.CreatePostAsync(post);
@@ -68,7 +89,11 @@ namespace Tweetbook.API.Controllers.V1
             var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
             var location = baseUrl + "/" + ApiRoutes.Posts.Get.Replace("{postId}", post.Id.ToString());
 
-            var response = new PostResponse { Id = post.Id };
+            var response = new PostResponse 
+            { 
+                Id = post.Id,
+                Name = post.Name
+            };
 
             return Created(location, response);
         }
