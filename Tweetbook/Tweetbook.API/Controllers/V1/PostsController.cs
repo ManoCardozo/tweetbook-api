@@ -1,20 +1,26 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Tweetbook.API.Domain;
 using Tweetbook.API.Services;
 using Tweetbook.API.Contracts.V1;
 using Tweetbook.API.Contracts.V1.Requests;
 using Tweetbook.API.Contracts.V1.Responses;
+using AutoMapper;
 
 namespace Tweetbook.API.Controllers.V1
 {
     public class PostsController : Controller
     {
+        private readonly IMapper _mapper;
         private readonly IPostService _postService;
-        public PostsController(IPostService postService)
+
+        public PostsController(
+            IMapper mapper,
+            IPostService postService)
         {
+            _mapper = mapper;
             _postService = postService;
         }
 
@@ -28,11 +34,7 @@ namespace Tweetbook.API.Controllers.V1
                 return NotFound();
             }
 
-            var response = new PostResponse
-            {
-                Id = post.Id,
-                Name = post.Name
-            };
+            var response = _mapper.Map<PostResponse>(post);
 
             return Ok(response);
         }
@@ -42,11 +44,7 @@ namespace Tweetbook.API.Controllers.V1
         {
             var posts = await _postService.GetPostsAsync();
 
-            var response = posts.Select(post => new PostResponse
-            {
-                Id = post.Id,
-                Name = post.Name
-            });
+            var response = _mapper.Map<List<PostResponse>>(posts);
 
             return Ok(response);
         }
@@ -67,11 +65,7 @@ namespace Tweetbook.API.Controllers.V1
                 return NotFound();
             }
 
-            var response = new PostResponse
-            {
-                Id = post.Id,
-                Name = post.Name
-            };
+            var response = _mapper.Map<PostResponse>(post);
 
             return Ok(response);
         }
@@ -89,11 +83,7 @@ namespace Tweetbook.API.Controllers.V1
             var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
             var location = baseUrl + "/" + ApiRoutes.Posts.Get.Replace("{postId}", post.Id.ToString());
 
-            var response = new PostResponse 
-            { 
-                Id = post.Id,
-                Name = post.Name
-            };
+            var response = _mapper.Map<PostResponse>(post);
 
             return Created(location, response);
         }
