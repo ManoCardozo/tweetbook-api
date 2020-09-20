@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Tweetbook.API.Domain;
 using Tweetbook.API.Services;
 using Tweetbook.API.Contracts.V1;
-using Tweetbook.API.Contracts.Requests;
-using Tweetbook.API.Contracts.Responses;
+using Tweetbook.API.Contracts.V1.Requests;
+using Tweetbook.API.Contracts.V1.Responses;
 
 namespace Tweetbook.API.Controllers.V1
 {

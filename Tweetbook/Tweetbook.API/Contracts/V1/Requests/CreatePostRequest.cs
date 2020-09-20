@@ -1,4 +1,4 @@
-﻿namespace Tweetbook.API.Contracts.Requests
+﻿namespace Tweetbook.API.Contracts.V1.Requests
 {
     public class CreatePostRequest
     {
