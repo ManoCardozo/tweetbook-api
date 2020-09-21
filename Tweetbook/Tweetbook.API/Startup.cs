@@ -34,6 +34,8 @@ namespace Tweetbook.API
                 app.UseHsts();
             }
 
+            app.ConfigureHealthChecks();
+
             var swaggerOptions = new SwaggerOptions();
 
             Configuration
