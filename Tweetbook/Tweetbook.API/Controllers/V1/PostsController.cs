@@ -5,16 +5,21 @@ using Tweetbook.API.Queries;
 using Tweetbook.API.Commands;
 using Tweetbook.Contracts.V1;
 using Tweetbook.Contracts.V1.Requests;
+using AutoMapper;
 using MediatR;
 
 namespace Tweetbook.API.Controllers.V1
 {
     public class PostsController : Controller
     {
+        private readonly IMapper _mapper;
         private readonly IMediator _mediator;
 
-        public PostsController(IMediator mediator)
+        public PostsController(
+            IMapper mapper, 
+            IMediator mediator)
         {
+            _mapper = mapper;
             _mediator = mediator;
         }
 
@@ -46,11 +51,8 @@ namespace Tweetbook.API.Controllers.V1
         [HttpPut(ApiRoutes.Posts.Update)]
         public async Task<IActionResult> UpdateAsync([FromRoute] Guid postId, [FromBody] UpdatePostRequest request)
         {
-            var command = new UpdatePostCommand
-            {
-                PostId = postId,
-                Name = request.Name
-            };
+            var command = _mapper.Map<UpdatePostCommand>(request);
+            command.PostId = postId;
 
             var response = await _mediator.Send(command);
 
@@ -65,10 +67,7 @@ namespace Tweetbook.API.Controllers.V1
         [HttpPost(ApiRoutes.Posts.Create)]
         public async Task<IActionResult> CreateAsync([FromBody] CreatePostRequest request)
         {
-            var command = new CreatePostCommand
-            {
-                Name = request.Name
-            };
+            var command = _mapper.Map<CreatePostCommand>(request);
 
             var response = await _mediator.Send(command);
 
