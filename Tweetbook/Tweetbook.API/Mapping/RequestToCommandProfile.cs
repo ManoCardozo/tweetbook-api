@@ -9,7 +9,7 @@ namespace Tweetbook.API.Mapping
         public RequestToCommandProfile()
         {
             CreateMap<CreatePostRequest, CreatePostCommand>();
-            CreateMap<UpdatePostCommand, UpdatePostCommand>();
+            CreateMap<UpdatePostRequest, UpdatePostCommand>();
         }
     }
 }
